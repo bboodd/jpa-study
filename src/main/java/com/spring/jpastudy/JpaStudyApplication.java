@@ -1,4 +1,4 @@
-package com.spring.jpa_study;
+package com.spring.jpastudy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class JpaStudyApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(JpaStudyApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(JpaStudyApplication.class, args);
+	}
 
 }

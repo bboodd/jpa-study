@@ -1,0 +1,39 @@
+database: postgres
+
+spring:
+  profiles:
+    active: postgres
+
+  sql:
+    init:
+      schema-locations: "classpath*:db/${database}/schema.sql"
+      data-locations: "classpath*:db/${database}/data.sql"
+
+  thymeleaf:
+    mode: HTML
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+
+  messages:
+    basename: "messages/messages"
+
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          max-age: 12h
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG

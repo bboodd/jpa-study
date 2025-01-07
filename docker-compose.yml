@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17.0
+    container_name: local-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=petclinic
+      - POSTGRES_USER=petclinic
+      - POSTGRES_DB=petclinic
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: local-pgadmin
+    ports:
+      - "5480:80"
+    expose:
+      - "80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=gkrgus9@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=1234

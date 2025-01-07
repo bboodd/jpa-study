@@ -1,0 +1,11 @@
+database: postgres
+
+spring:
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost/petclinic}
+    username: ${POSTGRES_USER:petclinic}
+    password: ${POSTGRES_PASS:petclinic}
+
+  sql:
+    init:
+      mode: always
