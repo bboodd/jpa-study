@@ -36,6 +36,7 @@
     <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
 
     <maven-checkstyle.version>3.6.0</maven-checkstyle.version>
+    <libsass.version>0.2.29</libsass.version>
   </properties>
   <dependencies>
     <dependency>
@@ -63,6 +64,7 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!-- 데이터베이스  -->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
@@ -72,6 +74,23 @@
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
       <scope>runtime</scope>
+    </dependency>
+
+    <!-- Webjars -->
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>webjars-locator-lite</artifactId>
+      <version>${webjars-locator.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>${webjars-bootstrap.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>font-awesome</artifactId>
+      <version>${webjars-font-awesome.version}</version>
     </dependency>
 
     <dependency>
@@ -88,6 +107,11 @@
       <groupId>org.testcontainers</groupId>
       <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
     </dependency>
   </dependencies>
 
@@ -113,6 +137,8 @@
               <configLocation>src/checkstyle/naver-checkstyle-rules.xml</configLocation>
               <consoleOutput>true</consoleOutput>
               <failsOnError>true</failsOnError>
+              <propertyExpansion>suppressionFile=${basedir}/src/checkstyle/naver-checkstyle-suppressions.xml
+              </propertyExpansion>
             </configuration>
           </execution>
         </executions>
