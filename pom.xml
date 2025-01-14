@@ -76,6 +76,17 @@
       <scope>runtime</scope>
     </dependency>
 
+    <!-- Caching -->
+    <dependency>
+      <groupId>javax.cache</groupId>
+      <artifactId>cache-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.ben-manes.caffeine</groupId>
+      <artifactId>caffeine</artifactId>
+    </dependency>
+
+
     <!-- Webjars -->
     <dependency>
       <groupId>org.webjars</groupId>
